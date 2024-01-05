@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Index.html</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+        html, body {
+            padding: 0;
+            margin: 0;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div class="root">
+    <section id="view_container" class="section view_container"></section>
+    <section class="section">
+        <form class="section_code_form">
+            <textarea spellcheck="false" id="code_sourcecode_input" class="sourcecode_input" aria-label="code">
+            </textarea>
+        </form>
+    </section>
+</div>
+<script type="module" src="index.ts"></script>
+</body>
+</html>
