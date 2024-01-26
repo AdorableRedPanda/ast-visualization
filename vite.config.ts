@@ -1,6 +1,7 @@
-import NodeGlobalsPolyfillPlugin from '@esbuild-plugins/node-globals-polyfill';
+import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
 import path from 'path';
 import { defineConfig } from 'vite';
+
 
 export default defineConfig({
 	base: '',
@@ -16,6 +17,7 @@ export default defineConfig({
 			output: {
 				entryFileNames: ({ name }) => (name.includes('worker') ? '[name].js' : '[name].[hash].js'),
 			},
+
 		},
 		target: 'modules',
 	},
@@ -27,13 +29,9 @@ export default defineConfig({
 			plugins: [
 				NodeGlobalsPolyfillPlugin({
 					buffer: true,
+					process: true,
 				}),
 			],
-		},
-	},
-	resolve: {
-		alias: {
-			'src/types': './src/types',
 		},
 	},
 	root: './src/client',

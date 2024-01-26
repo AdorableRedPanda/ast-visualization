@@ -20,7 +20,7 @@
     "outDir": "./dist/",
     "declaration": true,
     "strictNullChecks": true,
-    "types": [ "node" ]
+    "types": [ "node", "vite/client" ]
   },
   "include": ["./", "eslint.config.js"]
 }
