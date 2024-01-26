@@ -23,3 +23,5 @@ addEventListener('message', (ev) => {
 		post({ data: skipTrace(e), type: 'error' });
 	}
 });
+
+console.info('worker initialized');
