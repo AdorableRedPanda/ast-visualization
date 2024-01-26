@@ -23,8 +23,9 @@ export const getNodeLabel = (node: Node) => {
 			return node.type;
 		case 'JSXText':
 		case 'StringLiteral':
-		case 'NumericLiteral':
 			return node.value;
+		case 'NumericLiteral':
+			return node.value.toString(10);
 		case 'JSXElement':
 			return generate(node.openingElement.name).code;
 	}
