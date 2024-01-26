@@ -6,7 +6,7 @@ export default defineConfig({
 	build: {
 		assetsDir: './',
 
-		outDir: '../dist',
+		outDir: '../../dist',
 		rollupOptions: {
 			input: {
 				index: path.resolve('./src/client/', 'index.html'),
