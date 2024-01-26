@@ -25,6 +25,7 @@ jobs:
         uses: actions/configure-pages@v4
       - name: Open Web Client Directory
         run: |
+          cd ..
           ls -la
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
