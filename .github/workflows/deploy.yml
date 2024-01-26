@@ -23,6 +23,9 @@ jobs:
           npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v4
+      - name: Open Web Client Directory
+        run: |
+          ls -la
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
