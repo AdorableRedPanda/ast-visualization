@@ -3,6 +3,7 @@ import path from 'path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+	base: '',
 	build: {
 		assetsDir: './',
 
@@ -27,7 +28,6 @@ export default defineConfig({
 			],
 		},
 	},
-	publicDir: '../static',
 	resolve: {
 		alias: {
 			'src/types': './src/types',

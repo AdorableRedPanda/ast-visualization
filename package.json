@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "vite build",
-    "start": "npm run preview:start & npm run server:start",
-    "preview:start": "vite",
-    "server:start": "bun --hot src/server/index.ts"
+    "start": "vite"
   },
   "author": "",
   "license": "ISC",
