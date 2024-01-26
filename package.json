@@ -19,6 +19,7 @@
     "vite": "5.1.0-beta.3"
   },
   "devDependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "0.2.3",
     "@stylistic/eslint-plugin": "1.5.1",
     "@types/babel__generator": "7.6.4",
     "@types/babel__traverse": "7.20.1",
