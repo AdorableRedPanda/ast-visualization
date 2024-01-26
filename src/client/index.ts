@@ -6,7 +6,7 @@ import { getStoredCode, setLsCode } from './utils';
 const viewEl = document.getElementById('view_container');
 const codeEl = document.getElementById('code_sourcecode_input') as HTMLTextAreaElement | null;
 
-const worker = new Worker('./worker', { type: 'module' });
+const worker = new Worker('./worker.js', { type: 'module' });
 
 const postToWorker = (source: string) => {
 	worker.postMessage({ data: source, type: 'source' });
@@ -29,7 +29,6 @@ if (viewEl && codeEl) {
 				break;
 			case 'error':
 				showError(data);
-				console.error(data);
 				break;
 			case 'tree':
 				updateData(data);
