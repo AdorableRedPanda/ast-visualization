@@ -1,9 +1,9 @@
 import type { Message } from 'src/types';
 
 import { parseAst, transformAst } from '../lib';
-import { skipTrace } from './utils';
 const post = (message: Message) => postMessage(message);
 
+export const skipTrace = (e: unknown) => (typeof e === 'object' && e ? { ...e } : e);
 addEventListener('message', (ev) => {
 	const { data, type } = ev.data as Message;
 
