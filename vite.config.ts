@@ -4,13 +4,15 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	build: {
+		assetsDir: './',
+
+		outDir: '../dist',
 		rollupOptions: {
 			input: {
 				index: path.resolve('./src/client/', 'index.html'),
 				worker: path.resolve('./src/client/', 'worker.ts'),
 			},
 		},
-
 		target: 'modules',
 	},
 	optimizeDeps: {
