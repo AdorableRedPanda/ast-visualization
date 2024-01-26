@@ -17,3 +17,18 @@ export interface ViewTree {
 	edges: Edge[];
 	nodes: ViewNode[];
 }
+
+interface ErrorMessage {
+	data: unknown;
+	type: 'error';
+}
+
+interface SourceMessage {
+	data: string;
+	type: 'source';
+}
+interface TreeMessage {
+	data: ViewTree;
+	type: 'tree';
+}
+export type Message = ErrorMessage | SourceMessage | TreeMessage;
