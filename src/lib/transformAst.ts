@@ -1,8 +1,8 @@
+import type { ViewTree } from 'src/types';
+
 import generate from '@babel/generator';
 import traverse, { NodePath } from '@babel/traverse';
 import { Node, isIdentifier } from '@babel/types';
-
-import type { ViewTree } from '../types';
 
 const getEdgeSegment = (path: NodePath) => (path.key === path.parentKey
 	? `[${path.key}]`

@@ -1,4 +1,5 @@
-import { ViewTree } from '../types';
+import type { ViewTree } from 'src/types';
+
 import { initError, initForm, initView } from './components';
 import { getStoredCode, httpRequest, setLsCode } from './utils';
 
@@ -28,3 +29,4 @@ if (viewEl && codeEl) {
 }
 
 
+console.log(acorn);
