@@ -10,8 +10,11 @@ export default defineConfig({
 		outDir: '../../dist',
 		rollupOptions: {
 			input: {
-				index: path.resolve('./src/client/', 'index.html'),
-				worker: path.resolve('./src/client/', 'worker.ts'),
+				index: path.resolve('./src/client/index.html'),
+				worker: path.resolve('./src/client/worker.ts'),
+			},
+			output: {
+				entryFileNames: ({ name }) => (name.includes('worker') ? '[name].js' : '[name].[hash].js'),
 			},
 		},
 		target: 'modules',
