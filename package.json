@@ -1,14 +1,24 @@
 {
   "name": "ast-visualization",
   "version": "0.1.0",
-  "description": "visualize ast from source",
+  "description": "AST visualization app",
   "main": "index.js",
   "scripts": {
     "build": "vite build",
     "start": "vite"
   },
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdorableRedPanda/ast-visualization.git"
+  },
+  "keywords": [
+    "ast",
+    "abstract-syntax-tree",
+    "ast-visualization"
+  ],
+  "author": "AdorableRedPanda",
   "license": "ISC",
+  "homepage": "https://github.com/AdorableRedPanda/ast-visualization#readme",
   "dependencies": {
     "@babel/generator": "7.23.6",
     "@babel/parser": "7.23.6",

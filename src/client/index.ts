@@ -31,3 +31,5 @@ if (viewEl && codeEl) {
 
 	initForm(codeEl, onCodeChange, getStoredCode());
 }
+
+console.info('Source code available: ', 'https://github.com/AdorableRedPanda/ast-visualization');

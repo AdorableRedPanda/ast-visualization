@@ -19,7 +19,6 @@
     display: grid;
     grid-template-columns: 3fr 2fr;
     gap: 10px;
-    background: #f8f8ff;
 }
 
 .section_code_form {
@@ -37,19 +36,11 @@
 
     white-space: nowrap;
 
-    background: #19191e;
-    color: #e4e4f3;
+    background: var(--color-input-background);
+    color: var(--color-input-text);
 
     resize: none;
     border-radius: 5px;
-}
-
-.form_submit {
-    width: fit-content;
-    top: 10px;
-    left: 20px;
-
-    padding: 5px;
 }
 
 .view_container {
@@ -70,5 +61,11 @@
     left: 50%;
     transform: translate(-50%);
 
+    color: var(--color-error-text);
+    background: var(--color-error-background);
+
+    z-index: var(--z-index-error);
+
     background: #ffe0e0;
 }
+

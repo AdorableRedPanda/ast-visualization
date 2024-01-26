@@ -1,0 +1,9 @@
+html {
+    --color-input-text: #e4e4f3;
+    --color-input-background: #19191e;
+
+    --color-error-text: #673445;
+    --color-error-background: #f0dbde;
+
+    --z-index-error: 1;
+}
