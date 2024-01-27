@@ -14,10 +14,15 @@ addEventListener('message', (ev) => {
 	}
 
 	try {
-		const ast = parseAst(data);
-		const tree = transformAst(ast);
+		const source = data.trim();
 
-		post({ data: tree, type: 'tree' });
+		if (source) {
+			const ast = parseAst(source);
+			const tree = transformAst(ast);
+
+			post({ data: tree, type: 'tree' });
+		}
+
 		post({ data: data, type: 'source' });
 	} catch (e) {
 		post({ data: skipTrace(e), type: 'error' });
