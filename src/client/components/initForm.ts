@@ -8,12 +8,8 @@ export function initForm (input: HTMLTextAreaElement, onChange: (source: string)
 
 	const handleChange = debounce(onChange, 1000);
 
-	input.oninput = (ev) => {
+	input.oninput = () => {
 		const source = input.value;
-
-		if (!source) {
-			return;
-		}
 
 		handleChange(source);
 	};
