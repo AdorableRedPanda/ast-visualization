@@ -4,7 +4,8 @@ Paste or type code into the editor and inspect the visualization of generated AS
 
 Supports JavaScript (JS), TypeScript (TS), and JSX; requires web workers to be available in the browser.
 
-Built with [Babel](https://babeljs.io), [Visnetwork](https://visjs.org/), [CodeMirror](https://codemirror.net/) and [Vite](https://vitejs.dev/)
+Built with [Babel](https://babeljs.io), [Visnetwork](https://visjs.org/), [CodeMirror](https://codemirror.net/) and [Vite](https://vitejs.dev/).
+Inspired by [AST Explorer](https://astexplorer.net/).
 
 #### TODO:
 * code highlighting
