@@ -1,11 +1,8 @@
-.section {
-    overflow: auto;
-}
-.view_container_error.state_view {
+.error.view {
     display: block;
 }
 
-.view_container_error {
+.error {
     border-radius: 5px;
     display: none;
 
@@ -15,7 +12,6 @@
     left: 50%;
     transform: translate(-50%);
 
-    color: var(--color-error-text);
     background: var(--color-error-background);
 
     z-index: var(--z-index-error);
@@ -98,4 +94,9 @@ html {
 
 .link {
     color: inherit;
+}
+
+.section {
+    overflow: auto;
+    position: relative;
 }
