@@ -9,41 +9,11 @@
     gap: 10px;
 }
 
-.code {
-    flex: 1;
-    box-sizing: border-box;
-}
-
 .root {
     width: 100%;
     display: grid;
     grid-template-columns: 3fr 2fr;
     gap: 10px;
-}
-
-.section_code_form {
-    padding: 10px;
-    height: 100%;
-    position: relative;
-    background: var(--color-input-background);
-}
-
-.sourcecode_input {
-    position: static;
-    flex: 1;
-
-    height: 100%;
-    width: 100%;
-
-    padding: 10px;
-
-    white-space: nowrap;
-
-    background: var(--color-input-background);
-    color: var(--color-input-text);
-
-    resize: none;
-    border-radius: 5px;
 }
 
 .view_container {
