@@ -1,0 +1,1 @@
+export { initEditor } from './initEditor';

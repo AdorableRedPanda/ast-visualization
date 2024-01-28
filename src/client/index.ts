@@ -1,9 +1,9 @@
-import { initError, initForm, initView } from './components';
+import { initEditor, initError, initView } from './components';
 import { initWorker } from './initWorker';
 import { getStoredCode, setLsCode } from './utils';
 
 const viewContainer = document.getElementById('view_container');
-const codeContainer = document.getElementById('form_container');
+const codeContainer = document.getElementById('editor_container');
 
 
 if (!viewContainer || !codeContainer) {
@@ -14,7 +14,7 @@ const { onMessage, postMessage } = initWorker();
 
 const onCodeChange = (source: string) => postMessage({ data: source, type: 'source' });
 
-const { setSelected } = initForm(codeContainer, onCodeChange, getStoredCode());
+const { setSelected } = initEditor(codeContainer, onCodeChange, getStoredCode());
 
 const { setData } = initView(viewContainer, setSelected);
 

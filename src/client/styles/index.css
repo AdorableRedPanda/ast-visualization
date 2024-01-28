@@ -25,6 +25,7 @@
     padding: 10px;
     height: 100%;
     position: relative;
+    background: var(--color-input-background);
 }
 
 .sourcecode_input {
@@ -69,4 +70,14 @@
     z-index: var(--z-index-error);
 
     background: #ffe0e0;
+}
+
+.highlighted {
+    background: var(--color-highlighted-background);
+    filter: brightness(1.5);
+}
+
+.cm-editor {
+    height: 100%;
+    overflow: auto;
 }

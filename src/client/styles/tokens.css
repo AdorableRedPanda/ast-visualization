@@ -5,5 +5,7 @@ html {
     --color-error-text: #673445;
     --color-error-background: #f0dbde;
 
+    --color-highlighted-background: rgba(255, 255, 255, 0.16);
+
     --z-index-error: 1;
 }
