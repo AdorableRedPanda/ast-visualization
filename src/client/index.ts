@@ -2,34 +2,38 @@ import { initError, initForm, initView } from './components';
 import { initWorker } from './initWorker';
 import { getStoredCode, setLsCode } from './utils';
 
-const viewEl = document.getElementById('view_container');
-const codeEl = document.getElementById('code_sourcecode_input') as HTMLTextAreaElement | null;
+const viewContainer = document.getElementById('view_container');
+const codeContainer = document.getElementById('form_container');
 
 
-if (viewEl && codeEl) {
-	const updateData = initView(viewEl);
-	const { hide: hideError, show: showError } = initError(viewEl);
-
-	const { onMessage, postMessage } = initWorker();
-
-	onMessage(({ data, type }) => {
-		switch (type) {
-			case 'source':
-				setLsCode(data);
-				break;
-			case 'error':
-				showError(data);
-				break;
-			case 'tree':
-				updateData(data);
-				hideError();
-				break;
-		}
-	});
-
-	const onCodeChange = (source: string) => postMessage({ data: source, type: 'source' });
-
-	initForm(codeEl, onCodeChange, getStoredCode());
+if (!viewContainer || !codeContainer) {
+	throw 'Some container was not found';
 }
+
+const { onMessage, postMessage } = initWorker();
+
+const onCodeChange = (source: string) => postMessage({ data: source, type: 'source' });
+
+const { setSelected } = initForm(codeContainer, onCodeChange, getStoredCode());
+
+const { setData } = initView(viewContainer, setSelected);
+
+const { setError } = initError(viewContainer);
+
+onMessage(({ data, type }) => {
+	switch (type) {
+		case 'source':
+			setLsCode(data);
+			break;
+		case 'error':
+			setError(data);
+			break;
+		case 'tree':
+			setData(data);
+			setError(null);
+			break;
+	}
+});
+
 
 console.info('Source code available: ', 'https://github.com/AdorableRedPanda/ast-visualization');

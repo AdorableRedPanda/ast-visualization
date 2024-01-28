@@ -3,16 +3,18 @@ export function initError (view: HTMLElement) {
 
 	el.classList.add('view_container_error');
 
-	const show = (err: unknown) => {
+	const setError = (err: unknown) => {
+		if (!err) {
+			el.classList.remove('state_view');
+
+			return;
+		}
+
 		el.innerHTML = JSON.stringify(err, null, '\t');
 		el.classList.add('state_view');
 	};
 
-	const hide = () => {
-		el.classList.remove('state_view');
-	};
-
 	view.appendChild(el);
 
-	return { hide, show };
+	return { setError };
 }

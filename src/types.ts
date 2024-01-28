@@ -1,4 +1,5 @@
 import type { SourceLocation } from '@babel/types';
+export type { SourceLocation } from '@babel/types';
 
 export interface ViewNode {
 	id: string;

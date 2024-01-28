@@ -24,9 +24,11 @@
 .section_code_form {
     padding: 10px;
     height: 100%;
+    position: relative;
 }
 
 .sourcecode_input {
+    position: static;
     flex: 1;
 
     height: 100%;
@@ -68,4 +70,3 @@
 
     background: #ffe0e0;
 }
-
