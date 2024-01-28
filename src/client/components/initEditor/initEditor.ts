@@ -6,7 +6,14 @@ import { SourceLocation } from 'src/types';
 
 import { debounce } from '../../utils';
 import { highlightPositions, highlightingExtension } from './highlightingExtension';
-export function initEditor (container: HTMLElement, onChange: (source: string) => void, initial: string) {
+
+interface EditorProps {
+	container: HTMLElement;
+	initial: string;
+	onChange: (source: string) => void;
+}
+
+export function initEditor ({ container, initial, onChange }: EditorProps) {
 	if (initial) {
 		onChange(initial);
 	}

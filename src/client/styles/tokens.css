@@ -1,11 +1,22 @@
 html {
-    --color-input-text: #e4e4f3;
-    --color-input-background: #19191e;
+    --color-body-text: #312e38;
 
-    --color-error-text: #673445;
-    --color-error-background: #f0dbde;
+    --color-error-text: #450a0a;
+    --color-error-background: #fee2e2;
 
-    --color-highlighted-background: rgba(255, 255, 255, 0.16);
+    --color-canvas-background: #f5f5f8;
+
+    --color-bars-background: #dddde8;
+    --color-main-border: #c9c8d9;
+
+    --color-highlighted-background: #FFFFFF28;
 
     --z-index-error: 1;
+
+    --size-header-height: 26px;
+    --size-footer-height: 20px;
+
+    --size-footer-font: 0.9em;
+    --size-header-font: 0.9em;
+    --size-header-title-font: 1.2em;
 }

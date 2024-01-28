@@ -3,14 +3,30 @@
 <head>
     <meta charset="utf-8">
     <title>AST Visualizer</title>
+    <meta name="description" content="An online AST visualizer for JS">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/tokens.css">
 </head>
 <body>
 <div class="root">
-    <section id="view_container" class="section view_container"></section>
-    <section class="section" id="editor_container"></section>
+    <header class="header">
+        <h1 class="title">AST Visualizer</h1>
+        <a href="https://github.com/AdorableRedPanda/ast-visualization" target="_blank" class="link">Github</a>
+    </header>
+    <main class="main">
+        <section id="editor_container" class="section"></section>
+        <section id="view_container" class="section"></section>
+    </main>
+    <footer class="footer">
+        Built with
+        <a href="https://babeljs.io" target="_blank" class="link">Babel</a>,
+        <a href="https://visjs.org" target="_blank" class="link">Visnetwork</a>,
+        <a href="https://codemirror.net" target="_blank" class="link">CodeMirror</a> and
+        <a href="https://vitejs.dev" target="_blank" class="link">Vite</a>.
+        Inspired by <a href="https://astexplorer.net/" target="_blank" class="link">AST Explorer</a>.
+    </footer>
 </div>
 <script type="module" src="index.ts"></script>
 </body>

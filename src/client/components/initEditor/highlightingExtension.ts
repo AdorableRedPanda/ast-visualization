@@ -28,7 +28,7 @@ export const highlightingExtension = StateField.define({
 
 			const highlights = Decoration
 				.mark({ class: 'highlighted' })
-				.range(effect.value.start.index, effect.value.end.index);
+				.range(effect.value.start.index, effect.value.end.index + 1);
 
 			nextDecorations = nextDecorations.update({ add: [ highlights ] });
 		}

@@ -1,4 +1,5 @@
 import { initEditor, initError, initView } from './components';
+import { CODE_EXAMPLE, NO_CONTAINERS_ERROR } from './constants';
 import { initWorker } from './initWorker';
 import { getStoredCode, setLsCode } from './utils';
 
@@ -7,14 +8,18 @@ const codeContainer = document.getElementById('editor_container');
 
 
 if (!viewContainer || !codeContainer) {
-	throw 'Some container was not found';
+	throw NO_CONTAINERS_ERROR;
 }
 
 const { onMessage, postMessage } = initWorker();
 
 const onCodeChange = (source: string) => postMessage({ data: source, type: 'source' });
 
-const { setSelected } = initEditor(codeContainer, onCodeChange, getStoredCode());
+const { setSelected } = initEditor({
+	container: codeContainer,
+	initial: getStoredCode() || CODE_EXAMPLE,
+	onChange: onCodeChange,
+});
 
 const { setData } = initView(viewContainer, setSelected);
 
@@ -35,5 +40,3 @@ onMessage(({ data, type }) => {
 	}
 });
 
-
-console.info('Source code available: ', 'https://github.com/AdorableRedPanda/ast-visualization');
