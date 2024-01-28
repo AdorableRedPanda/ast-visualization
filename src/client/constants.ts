@@ -8,4 +8,6 @@ const App: React.FC<Props> = ({ name }) => <h2>Hello {name}!</h2>
 
 export const NO_CONTAINERS_ERROR = 'Some container was not found';
 
-export const SOURCE_LINK = 'https://github.com/AdorableRedPanda/ast-visualization';
+export const UNSUPPORTED_MESSAGE_WORKER = 'Worker doesn\'t support message type:';
+
+export const WORKER_INIT = 'Worker initialized';

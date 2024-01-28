@@ -1,6 +1,7 @@
 import type { Message } from 'src/types';
 
 import { parseAst, transformAst } from '../lib';
+import { UNSUPPORTED_MESSAGE_WORKER, WORKER_INIT } from './constants';
 const post = (message: Message) => postMessage(message);
 
 export const skipTrace = (e: unknown) => (typeof e === 'object' && e ? { ...e } : e);
@@ -8,7 +9,7 @@ addEventListener('message', (ev) => {
 	const { data, type } = ev.data as Message;
 
 	if (type !== 'source') {
-		console.error('Worker doesn\'t support message type:', type);
+		console.error(UNSUPPORTED_MESSAGE_WORKER, type);
 
 		return;
 	}
@@ -29,4 +30,4 @@ addEventListener('message', (ev) => {
 	}
 });
 
-console.info('worker initialized');
+console.info(WORKER_INIT);
