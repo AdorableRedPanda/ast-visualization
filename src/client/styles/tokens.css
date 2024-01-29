@@ -8,7 +8,7 @@ html {
     --color-bars-background: #dddde8;
     --color-main-border: #c9c8d9;
 
-    --color-highlighted-background: #FFFFFF28;
+    --color-highlighted-background: rgba(226, 228, 253, 0.24);
 
     --z-index-error: 1;
 

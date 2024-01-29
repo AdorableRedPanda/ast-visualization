@@ -1,9 +1,9 @@
 import type { SourceLocation, ViewTree } from 'src/types';
 
 import { Data } from 'vis-network/declarations/network/Network';
-import { Network } from 'vis-network/standalone/esm/vis-network';
+import { Network, Options } from 'vis-network/standalone/esm/vis-network';
 
-const ViewOptions = {
+const ViewOptions: Options = {
 	layout: {
 		hierarchical: {
 			blockShifting: true,
@@ -13,9 +13,30 @@ const ViewOptions = {
 			levelSeparation: 150,
 			nodeSpacing: 100,
 			parentCentralization: true,
-			shakeTowards: 'roots', // roots, leaves
-			sortMethod: 'directed', // hubsize, directed
+			shakeTowards: 'roots',
+			sortMethod: 'directed',
 			treeSpacing: 200,
+		},
+	},
+	nodes: {
+		color: {
+			background: '#e2e8f7',
+			border: '#9083a4',
+			highlight: {
+				background: '#e2e4fd',
+				border: '#5f5a73',
+			},
+		},
+		font: {
+			color: '#393342',
+			face: 'Nunito',
+			size: 18,
+		},
+		margin: {
+			bottom: 5,
+			left: 5,
+			right: 5,
+			top: 5,
 		},
 	},
 };
