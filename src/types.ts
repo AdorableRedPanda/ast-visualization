@@ -5,7 +5,6 @@ export interface ViewNode {
 	id: string;
 	label: null | number | string;
 	loc: SourceLocation | null;
-	shape: string;
 }
 
 interface Edge {

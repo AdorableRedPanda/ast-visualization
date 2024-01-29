@@ -8,6 +8,6 @@ Built with [Babel](https://babeljs.io), [vis.js](https://visjs.org/), [CodeMirro
 Inspired by [AST Explorer](https://astexplorer.net/).
 
 #### TODO:
-* code highlighting
+* fix highlighting positions
 * lazy graph rendering
 * nodes/edges inspection

@@ -23,7 +23,7 @@ export function transformAst (ast: Node) {
 
 			const label = getNodeLabel(path.node);
 			if (label.trim()) {
-				tree.nodes.push({ id: nextId, label, loc: path.node.loc || null, shape: 'box' });
+				tree.nodes.push({ id: nextId, label, loc: path.node.loc || null });
 			}
 
 			idStack.push(nextId);

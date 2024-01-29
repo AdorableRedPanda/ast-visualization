@@ -38,6 +38,7 @@ const ViewOptions: Options = {
 			right: 5,
 			top: 5,
 		},
+		shape: 'box',
 	},
 };
 

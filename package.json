@@ -1,7 +1,7 @@
 {
   "name": "ast-visualization",
   "version": "0.1.0",
-  "description": "AST visualization app",
+  "description": "JS AST visualization app",
   "main": "index.js",
   "scripts": {
     "build": "vite build",
