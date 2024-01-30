@@ -1,6 +1,8 @@
 import type { Message } from 'src/types';
 
-const workerPath = import.meta.env.DEV ? './worker/worker.ts' : './worker.js';
+const workerPath = import.meta.env.DEV
+	? './worker/worker.ts'
+	: `./worker.${import.meta.env.VITE_VERSION}.js`;
 
 export const initWorker = () => {
 	const worker = new Worker(workerPath, { type: 'module' });

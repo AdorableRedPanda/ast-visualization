@@ -2,7 +2,8 @@ import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfil
 import path from 'path';
 import { defineConfig } from 'vite';
 
-console.log(process.env.npm_package_version);
+const APP_VERSION = process.env.npm_package_version;
+
 export default defineConfig({
 	base: '',
 	build: {
@@ -15,7 +16,9 @@ export default defineConfig({
 				worker: path.resolve('./src/client/worker/worker.ts'),
 			},
 			output: {
-				entryFileNames: ({ name }) => (name.includes('worker') ? '[name].js' : '[name].[hash].js'),
+				entryFileNames: ({ name }) => (name.includes('worker')
+					? `[name].${APP_VERSION}.js`
+					: '[name].[hash].js'),
 			},
 
 		},
@@ -25,7 +28,7 @@ export default defineConfig({
 		Buffer: [ 'buffer', 'Buffer' ],
 		global: 'window',
 		'import.meta.env.VITE_TIMESTAMP': JSON.stringify(Date.now()),
-		'import.meta.env.VITE_VERSION': JSON.stringify(process.env.npm_package_version),
+		'import.meta.env.VITE_VERSION': JSON.stringify(APP_VERSION),
 		process: {},
 
 	},
