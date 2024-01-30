@@ -1,5 +1,4 @@
-import generate from '@babel/generator';
-import { Node, isIdentifier } from '@babel/types';
+import { Node } from '@babel/types';
 
 export const getNodeLabel = (node: Node) => {
 	switch (node.type) {
