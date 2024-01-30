@@ -1,7 +1,7 @@
 import { initEditor, initError, initView } from './components';
 import { CODE_EXAMPLE, NO_CONTAINERS_ERROR } from './constants';
-import { initWorker } from './initWorker';
 import { getStoredCode, setLsCode } from './utils';
+import { initWorker } from './worker';
 
 const viewContainer = document.getElementById('view_container');
 const codeContainer = document.getElementById('editor_container');
@@ -40,3 +40,4 @@ onMessage(({ data, type }) => {
 	}
 });
 
+console.log();

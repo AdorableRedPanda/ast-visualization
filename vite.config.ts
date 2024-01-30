@@ -12,7 +12,7 @@ export default defineConfig({
 		rollupOptions: {
 			input: {
 				index: path.resolve('./src/client/index.html'),
-				worker: path.resolve('./src/client/worker.ts'),
+				worker: path.resolve('./src/client/worker/worker.ts'),
 			},
 			output: {
 				entryFileNames: ({ name }) => (name.includes('worker') ? '[name].js' : '[name].[hash].js'),

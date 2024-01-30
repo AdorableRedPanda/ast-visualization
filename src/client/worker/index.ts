@@ -1,0 +1,1 @@
+export { initWorker } from './initWorker';
