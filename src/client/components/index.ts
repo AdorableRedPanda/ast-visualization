@@ -1,5 +1,5 @@
-export { initEditor } from './initEditor';
-export { initError } from './initError';
-export { initView } from './initView';
+export { initEditor } from './editor';
+export { initError } from './error';
+export { initView } from './view';
 
 

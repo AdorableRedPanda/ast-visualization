@@ -1,0 +1,1 @@
+export { initError } from './initError';

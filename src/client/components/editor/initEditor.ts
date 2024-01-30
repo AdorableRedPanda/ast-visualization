@@ -6,6 +6,7 @@ import { SourceLocation } from 'src/types';
 
 import { debounce } from '../../utils';
 import { highlightPositions, highlightingExtension } from './highlightingExtension';
+import './styles.css';
 
 interface EditorProps {
 	container: HTMLElement;

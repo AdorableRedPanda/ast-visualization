@@ -1,0 +1,18 @@
+.error {
+    border-radius: 5px;
+    display: none;
+
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+
+    background: var(--color-error-background);
+
+    z-index: var(--z-index-error);
+}
+
+.view {
+    display: block;
+}

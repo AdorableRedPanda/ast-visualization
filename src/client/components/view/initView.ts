@@ -3,6 +3,8 @@ import type { SourceLocation, ViewTree } from 'src/types';
 import { Data } from 'vis-network/declarations/network/Network';
 import { Network, Options } from 'vis-network/standalone/esm/vis-network';
 
+import './styles.css';
+
 const ViewOptions: Options = {
 	layout: {
 		hierarchical: {

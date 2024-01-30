@@ -1,0 +1,9 @@
+.cm-editor {
+    height: 100%;
+    overflow: auto;
+}
+
+.highlighted {
+    background: var(--color-highlighted-background);
+    filter: brightness(1.5);
+}
