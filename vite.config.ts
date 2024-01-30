@@ -2,7 +2,7 @@ import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfil
 import path from 'path';
 import { defineConfig } from 'vite';
 
-
+console.log(process.env.npm_package_version);
 export default defineConfig({
 	base: '',
 	build: {
@@ -24,7 +24,10 @@ export default defineConfig({
 	define: {
 		Buffer: [ 'buffer', 'Buffer' ],
 		global: 'window',
+		'import.meta.env.VITE_TIMESTAMP': JSON.stringify(Date.now()),
+		'import.meta.env.VITE_VERSION': JSON.stringify(process.env.npm_package_version),
 		process: {},
+
 	},
 	optimizeDeps: {
 		esbuildOptions: {

@@ -1,5 +1,5 @@
 import { initEditor, initError, initView } from './components';
-import { CODE_EXAMPLE, NO_CONTAINERS_ERROR } from './constants';
+import { BUILD_INFO, CODE_EXAMPLE, NO_CONTAINERS_ERROR } from './constants';
 import { getStoredCode, setLsCode } from './utils';
 import { initWorker } from './worker';
 
@@ -40,4 +40,4 @@ onMessage(({ data, type }) => {
 	}
 });
 
-console.log();
+console.info(BUILD_INFO);
