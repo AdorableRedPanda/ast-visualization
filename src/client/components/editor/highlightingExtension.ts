@@ -1,7 +1,8 @@
+import type { SourceLocation } from 'src/types';
+
 import { StateEffect, StateField } from '@codemirror/state';
 import { Decoration } from '@codemirror/view';
 import { EditorView } from 'codemirror';
-import { SourceLocation } from 'src/types';
 
 const setHighlight = StateEffect.define<SourceLocation>({});
 const clearHighlights = StateEffect.define({});

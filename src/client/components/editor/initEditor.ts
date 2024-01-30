@@ -1,12 +1,14 @@
+import type { SourceLocation } from 'src/types';
+
 import { javascript } from '@codemirror/lang-javascript';
 import { EditorState } from '@codemirror/state';
 import { oneDark } from '@codemirror/theme-one-dark';
 import { EditorView, basicSetup } from 'codemirror';
-import { SourceLocation } from 'src/types';
+
+import './styles.css';
 
 import { debounce } from '../../utils';
 import { highlightPositions, highlightingExtension } from './highlightingExtension';
-import './styles.css';
 
 interface EditorProps {
 	container: HTMLElement;

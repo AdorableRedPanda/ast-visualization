@@ -23,6 +23,31 @@ module.exports = [
 		},
 		rules: {
 			...perfectionist.configs['recommended-natural'].rules,
+			'perfectionist/sort-imports': [
+				'error',
+				{
+					'custom-groups': {
+						type: {
+							react: 'react',
+						},
+						value: {
+							react: [ 'react', 'react-*' ],
+						},
+					},
+					groups: [
+						'type',
+						'react',
+						[ 'builtin', 'external' ],
+						'internal-type',
+						'internal',
+						'style',
+						'unknown',
+					],
+					'newlines-between': 'always',
+					order: 'asc',
+					type: 'natural',
+				},
+			],
 		},
 	},
 	stylisticPlugin.configs['all-flat'],

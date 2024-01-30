@@ -1,4 +1,4 @@
-import { Message } from 'src/types';
+import type { Message } from 'src/types';
 
 const workerPath = import.meta.env.DEV ? './worker.ts' : './worker.js';
 
