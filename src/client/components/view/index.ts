@@ -1,0 +1,1 @@
+export { initView } from './initView';
