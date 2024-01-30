@@ -9,6 +9,6 @@ export const NO_CONTAINERS_ERROR = 'Some container was not found';
 export const UNSUPPORTED_MESSAGE_WORKER = 'Worker doesn\'t support message type:';
 export const WORKER_INIT = 'Worker initialized';
 
-const buildTime = (new Date(import.meta.env.VITE_TIMESTAMP)).toLocaleString('en-US');
+const buildTime = (new Date(import.meta.env.VITE_TIMESTAMP)).toLocaleString();
 const appVersion = import.meta.env.VITE_VERSION;
 export const BUILD_INFO = `Version: ${appVersion}. Build time: ${buildTime}`;
