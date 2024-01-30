@@ -7,3 +7,15 @@
     background: var(--color-highlighted-background);
     filter: brightness(1.5);
 }
+
+.cm-scroller::-webkit-scrollbar {
+    height: 10px;
+}
+.cm-scroller::-webkit-scrollbar-track {
+    background: transparent;
+}
+.cm-scroller::-webkit-scrollbar-thumb {
+    background-color: var(--color-editor-scroll-background);
+    border-radius: 20px;
+    height: 10px;
+}
