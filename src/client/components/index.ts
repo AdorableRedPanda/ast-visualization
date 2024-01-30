@@ -1,5 +1,5 @@
 export { initEditor } from './editor';
 export { initError } from './error';
-export { initView } from './view';
+export { view } from './view';
 
 

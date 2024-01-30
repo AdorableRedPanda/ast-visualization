@@ -56,6 +56,8 @@ html {
     --visnetwork-height: calc(100vh - ( var(--size-header-height) + var(--size-footer-height)));
 
     height: var(--visnetwork-height);
+
+    background: var(--color-main-background);
 }
 
 .bar {

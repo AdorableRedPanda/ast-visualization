@@ -1,4 +1,4 @@
-import { initEditor, initError, initView } from './components';
+import { initEditor, initError, view } from './components';
 import { CODE_EXAMPLE, NO_CONTAINERS_ERROR } from './constants';
 import { initWorker } from './initWorker';
 import { getStoredCode, setLsCode } from './utils';
@@ -21,7 +21,7 @@ const { setSelected } = initEditor({
 	onChange: onCodeChange,
 });
 
-const { setData } = initView(viewContainer, setSelected);
+const { setData } = view(viewContainer, setSelected);
 
 const { setError } = initError(viewContainer);
 
