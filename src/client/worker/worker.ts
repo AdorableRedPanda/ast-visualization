@@ -1,7 +1,8 @@
 import type { Message } from 'src/types';
 
-import { parseAst, transformAst } from '../../lib';
 import { UNSUPPORTED_MESSAGE_WORKER, WORKER_INIT } from '../constants';
+import { parseAst } from './parseAst';
+import { transformAst } from './transformAst';
 const post = (message: Message) => postMessage(message);
 
 export const skipTrace = (e: unknown) => (typeof e === 'object' && e ? { ...e } : e);
