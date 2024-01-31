@@ -9,11 +9,11 @@ export default defineConfig({
 	build: {
 		assetsDir: './',
 
-		outDir: '../../dist',
+		outDir: '../dist',
 		rollupOptions: {
 			input: {
-				index: path.resolve('./src/client/index.html'),
-				worker: path.resolve('./src/client/worker/worker.ts'),
+				index: path.resolve('./src/index.html'),
+				worker: path.resolve('./src/worker/worker.ts'),
 			},
 			output: {
 				entryFileNames: ({ name }) => (name.includes('worker')
@@ -51,7 +51,7 @@ export default defineConfig({
 			'src/types': './src/types',
 		},
 	},
-	root: './src/client',
+	root: './src',
 	server: {
 		open: true,
 		port: 8080,

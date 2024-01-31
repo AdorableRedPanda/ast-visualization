@@ -1,4 +1,4 @@
-# ast-visualization
+# AST Visualizer for JS
 
 Paste or type code into the editor and inspect the visualization of generated AST: [ast-visualization](https://adorableredpanda.github.io/ast-visualization/).
 
