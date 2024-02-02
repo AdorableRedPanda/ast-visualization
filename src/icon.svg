@@ -1,8 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="128" height="128" viewBox="0 0 128 128">
 <style>
     .color {
-        fill: #2e3f81;
+        fill: #c7d2fe;
     }
+    @media (prefers-color-scheme: light) {
+        .color {
+            fill: #2e3f81;
+        }
+    }
+
 </style>
 <g transform="matrix(1.3524978751 0 0 1.3524978751 64 15.9759288991)" id="zPTvWeAwKGWElPV22wxIA"  >
 <path class="color" d="M 0 -11.75947 C 6.49123 -11.75947 11.75947 -6.491230000000001 11.75947 0 C 11.75947 6.49123 6.491230000000001 11.75947 0 11.75947 C -6.49123 11.75947 -11.75947 6.491230000000001 -11.75947 0 C -11.75947 -6.49123 -6.491230000000001 -11.75947 0 -11.75947 z" stroke-linecap="round" />
