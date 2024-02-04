@@ -4,15 +4,14 @@ export const getNodeLabel = (node: Node) => {
 	switch (node.type) {
 		case 'BinaryExpression':
 		case 'UnaryExpression':
-			return `Operator: ${node.operator}`;
+			return `${node.type}\n${node.operator}`;
 		case 'JSXIdentifier':
 		case 'Identifier':
-			return node.name;
+			return `${node.type}\n${node.name}`;
 		case 'JSXText':
 		case 'StringLiteral':
-			return node.value;
 		case 'NumericLiteral':
-			return node.value.toString(10);
+			return `${node.type}\n${node.value}`;
 	}
 
 	return node.type;
