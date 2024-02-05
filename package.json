@@ -31,10 +31,8 @@
   },
   "devDependencies": {
     "@esbuild-plugins/node-globals-polyfill": "0.2.3",
-    "@stylistic/eslint-plugin": "1.5.1",
     "@types/babel__traverse": "7.20.1",
-    "@typescript-eslint/parser": "6.15.0",
     "eslint": "8.54.0",
-    "eslint-plugin-perfectionist": "2.5.0"
+    "eslint-config-redpanda": "0.1.3"
   }
 }

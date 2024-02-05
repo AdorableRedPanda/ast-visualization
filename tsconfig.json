@@ -22,5 +22,5 @@
     "strictNullChecks": true,
     "types": [ "node", "vite/client" ]
   },
-  "include": ["./", "eslint.config.js"]
+  "include": ["./", ".eslintrc.js"]
 }
